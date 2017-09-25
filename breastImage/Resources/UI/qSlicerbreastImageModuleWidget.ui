@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>qSlicerbreastImageModuleWidget</class>
+ <widget class="qSlicerWidget" name="qSlicerbreastImageModuleWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>750</width>
+    <height>890</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4">
+   <item>
+    <widget class="ctkCollapsibleButton" name="CTKCollapsibleButton_3" native="true">
+     <property name="text" stdset="0">
+      <string>IO</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>ReportId:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="reportIdSpinBox">
+          <property name="maximum">
+           <number>1000</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="importXMLButton">
+        <property name="text">
+         <string>Import XML</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="outputXMLButton">
+        <property name="text">
+         <string>Output XML</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="ctkCollapsibleButton" name="CTKCollapsibleButton" native="true">
+     <property name="text" stdset="0">
+      <string>Dicom Information</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_18">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Input Patient:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="qMRMLNodeComboBox" name="inputPatientNodeComboBox" native="true">
+          <property name="nodeTypes" stdset="0">
+           <string>vtkMRMLSubjectHierarchyNode</string>
+          </property>
+          <property name="noneEnabled" stdset="0">
+           <bool>true</bool>
+          </property>
+          <property name="addEnabled" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="removeEnabled" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="renameEnabled" stdset="0">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_19">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Input Study:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="qMRMLNodeComboBox" name="inputStudyNodeComboBox" native="true">
+          <property name="nodeTypes" stdset="0">
+           <string>vtkMRMLSubjectHierarchyNode</string>
+          </property>
+          <property name="noneEnabled" stdset="0">
+           <bool>true</bool>
+          </property>
+          <property name="addEnabled" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="removeEnabled" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="renameEnabled" stdset="0">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_20">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Input Series:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="qMRMLNodeComboBox" name="inputImageNodeComboBox" native="true">
+          <property name="nodeTypes" stdset="0">
+           <string>vtkMRMLSubjectHierarchyNode</string>
+          </property>
+          <property name="noneEnabled" stdset="0">
+           <bool>true</bool>
+          </property>
+          <property name="addEnabled" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="removeEnabled" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="renameEnabled" stdset="0">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title">
+           <string>Patient Information</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QTableWidget" name="patientInfTableWidget">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="contextMenuPolicy">
+              <enum>Qt::CustomContextMenu</enum>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <attribute name="horizontalHeaderVisible">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="horizontalHeaderCascadingSectionResizes">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="horizontalHeaderHighlightSections">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="horizontalHeaderStretchLastSection">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="verticalHeaderVisible">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="verticalHeaderHighlightSections">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="verticalHeaderStretchLastSection">
+              <bool>false</bool>
+             </attribute>
+             <row>
+              <property name="text">
+               <string>PatientID</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>PatientBirthDate</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>StudyID</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>StudyDate</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>SeriesNumber</string>
+              </property>
+             </row>
+             <column>
+              <property name="text">
+               <string>Value</string>
+              </property>
+              <property name="textAlignment">
+               <set>AlignCenter</set>
+              </property>
+             </column>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title">
+           <string>Image Information</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QTableWidget" name="imageInfTableWidget">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <attribute name="horizontalHeaderStretchLastSection">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="verticalHeaderStretchLastSection">
+              <bool>false</bool>
+             </attribute>
+             <row>
+              <property name="text">
+               <string>View</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>Modality</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>Dimensions</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>Spacing</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>ScalarType</string>
+              </property>
+             </row>
+             <column>
+              <property name="text">
+               <string>Value</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="ctkCollapsibleButton" name="CTKCollapsibleButton_2" native="true">
+     <property name="text" stdset="0">
+      <string>PACAS Information</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <item>
+         <widget class="QLabel" name="label_36">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Subtlety:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="subtleyComboBox">
+          <item>
+           <property name="text">
+            <string>1</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>3</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>4</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>5</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_9">
+        <item>
+         <widget class="QLabel" name="label_37">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Density :</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="densityComboBox">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <item>
+           <property name="text">
+            <string>1-Predominantly Fatty</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2-Scattered Fibroglandular Densities</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>3-Heterogeneously Dense</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>4-Extremely Dense</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_10">
+        <item>
+         <widget class="QLabel" name="label_38">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Assessment:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="biradsComboBox">
+          <item>
+           <property name="text">
+            <string>0-Incomplete</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>1-Negative</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2-Benign</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>3-Probably Benign</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>4-Suspicious Abnormality</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>5-Highly Suspicious of Malignancy</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>6-Known Biopsy Proven Malignancy</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_11">
+        <item>
+         <widget class="QLabel" name="label_39">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Pathology:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="resultComboBox">
+          <item>
+           <property name="text">
+            <string>Benign</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Malignant</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="ctkCollapsibleButton" name="CTKCollapsibleButton_1" native="true">
+     <property name="text" stdset="0">
+      <string>Edit</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QLabel" name="label_34">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Input Volume:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="qMRMLNodeComboBox" name="inputEditVolumeNodeComboBox" native="true">
+          <property name="nodeTypes" stdset="0">
+           <string>vtkMRMLVolumeNode</string>
+          </property>
+          <property name="noneEnabled" stdset="0">
+           <bool>true</bool>
+          </property>
+          <property name="addEnabled" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="removeEnabled" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="renameEnabled" stdset="0">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QLabel" name="label_35">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Input ROI:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="qMRMLNodeComboBox" name="inputEditROINodeComboBox" native="true">
+          <property name="nodeTypes" stdset="0">
+           <string>vtkMRMLAnnotationROINode</string>
+          </property>
+          <property name="noneEnabled" stdset="0">
+           <bool>true</bool>
+          </property>
+          <property name="addEnabled" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="removeEnabled" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="renameEnabled" stdset="0">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="label_40">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Input Ruler:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="qMRMLNodeComboBox" name="inputEditRulerNodeComboBox" native="true">
+          <property name="nodeTypes" stdset="0">
+           <string>vtkMRMLAnnotationRulerNode</string>
+          </property>
+          <property name="noneEnabled" stdset="0">
+           <bool>true</bool>
+          </property>
+          <property name="addEnabled" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="removeEnabled" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="renameEnabled" stdset="0">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="transformButton">
+        <property name="text">
+         <string>Transform</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="addButton">
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="deleteButton">
+        <property name="text">
+         <string>Delete</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="refreshRoiButton">
+        <property name="text">
+         <string>Refresh ROI</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="refreshRulerButton">
+        <property name="text">
+         <string>Refresh Ruler</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="editInfTableWidget">
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SingleSelection</enum>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectRows</enum>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>70</number>
+        </attribute>
+        <attribute name="horizontalHeaderHighlightSections">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderStretchLastSection">
+         <bool>false</bool>
+        </attribute>
+        <row>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </row>
+        <column>
+         <property name="text">
+          <string>Number</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Size</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Shape</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Distribute</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>xCenter</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>yCenter</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>zCenter</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>xRadius</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>yRadius</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>zRadius</string>
+         </property>
+        </column>
+        <item row="0" column="0">
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item row="0" column="1">
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item row="0" column="3">
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>1</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QProgressBar" name="transformProgressBar">
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>0</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>qSlicerWidget</class>
+   <extends>QWidget</extends>
+   <header>qSlicerWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ctkCollapsibleButton</class>
+   <extends>QWidget</extends>
+   <header>ctkCollapsibleButton.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>qMRMLNodeComboBox</class>
+   <extends>QWidget</extends>
+   <header>qMRMLNodeComboBox.h</header>
+   <container>1</container>
+   <slots>
+    <slot>setMRMLScene(vtkMRMLScene*)</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
